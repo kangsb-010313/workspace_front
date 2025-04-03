@@ -1,0 +1,106 @@
+@charset "UTF-8";
+
+
+h2{font-size: 25px;}
+h3{font-size: 20px;}
+
+h1{
+    font-family: 궁서;
+    font-size: 30px;
+    letter-spacing: 15px;
+}
+
+/*-----------------------------------*/
+.i-blue{
+    color: #0000ff;
+    font-weight: bold;
+    font-style: italic;
+}
+.i-bred{
+    color: #ff0000;
+    font-weight: bold;
+    font-style: italic;
+}
+
+/*-----------------------------------*/
+
+#h3-g{
+    color: #00ff00;
+    text-decoration: underline;
+}
+.m-red{
+    color: #ff0000;
+    font-weight: bold;
+}
+#uline{
+    text-decoration: underline;
+}
+.gray{
+    background-color: #D9D9D9;
+}
+.indent{
+    text-indent: 30px;
+}
+
+/*-----------------------------------*/
+
+
+.b-g{
+    color: #00ff00;
+    font-weight: bold;
+}
+.i-b{
+    color: #0000ff;
+    font-style: italic;
+}
+.b-r{
+    color: #ff0000;
+    font-weight: bold;
+}
+
+ul{
+    list-style-type: square;
+}
+ol>li{
+    list-style-type: none;
+}
+
+th{
+    background-color: #C8EBFA;
+}
+tbody>tr:hover{
+    background-color: #EDD3ED;
+}
+
+td.second{
+    text-align: right;
+}
+.second::before{
+    content:"약 ";
+}
+.second::after{
+    content:" (MB/초)";
+}
+
+/*-----------------------------------*/
+
+
+a:link.bb{
+    color: #000000;
+    text-decoration: none;
+}
+a:visited.bb{
+    color: #00ff00;
+}
+a:hover.bb{
+    color: #0000ff;
+    text-decoration: underline;
+}
+a:active.bb{
+    color: #0000ff;
+    text-decoration: underline;
+}
+
+
+
+
