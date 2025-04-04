@@ -1,0 +1,31 @@
+@charset "UTF-8" ;
+
+body{
+    width: 600px;
+    border: 1px solid #000000;
+    padding: 0px 30px 20px 10px;
+}
+table{
+    border-collapse: collapse;
+}
+table>thead{
+    background-color: #d5d5d5;
+}
+table>thead>tr{
+    border-top: 2px solid #000000;
+    border-bottom: 2px solid #000000;
+}
+
+/*-----------------------------*/
+
+tbody{
+    text-align: center;
+}
+table>tbody>tr{
+    border-bottom: 1px dotted #000000;
+}
+table>tbody>tr:last-child{
+    border-bottom: 2px solid #000000;}
+tbody>tr:hover{
+    background-color: #ffff00;
+}

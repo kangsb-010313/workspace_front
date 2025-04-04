@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>스타일시트</title>
+
+        <link rel="stylesheet" href="./hw01.css">
+
+    </head>
+
+    <body>
+        <h1>일반게시판</h1>
+
+        <form action="" method="get">
+            게시판선택
+            <select>
+                <option value="pick">선택해주세요</option>
+                <option value="1">one</option>
+                <option value="2">two</option>
+                <option value="3">three</option>
+            </select> 
+
+            <br> 
+
+            <label for="title">제목</label>
+            <input id="title" type="text" placeholder="제목을 입력해 주세요" name="" value=""><br>
+
+            <label for="pw">비밀번호</label>
+            <input id="pw" type="password" placeholder="패스워드를 입력하세요" name="" value=""><br>
+
+            공개범위
+            <label for="self">본인</label>
+            <input id="self" type="radio" name="pb" value="">
+
+            <label for="member">로그인회원</label>
+            <input id="member" type="radio" name="pb" value="">
+
+            <label for="frnd">친구</label>
+            <input id="frnd" type="radio" name="pb" value="">
+
+            <label for="all">전체</label>
+            <input id="all" type="radio" name="pb" value="">
+
+            <br>
+            
+            허용범위
+            <label for="cm">댓글허용</label>
+            <input id="cm" type="checkbox" name="" value="">
+
+            <label for="reply">답글허용</label>
+            <input id="reply" type="checkbox" name="" value="">
+
+            <label for="heart">좋아요허용</label>
+            <input id="heart" type="checkbox" name="" value="">
+
+            <br>
+
+            <textarea name="content"></textarea>
+
+            <br><br>
+
+            첨부파일
+            <button>파일 선택</button>
+            선택된 파일 없음
+            <hr>
+            <button>등록</button>
+            <button>초기화</button>
+        </form>
+       
+    </body>
+</html>
