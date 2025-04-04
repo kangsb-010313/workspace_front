@@ -10,8 +10,6 @@
             table{
                 border-collapse: collapse;
                 text-align: center;
-                display: inline-block;
-                border-bottom: 2px solid gray;
             }
             thead{
                 background-color: #d5d5d5;
@@ -24,11 +22,19 @@
             tbody>tr:hover{
                 background-color: #ffff00;
             }
+            tbody>tr{
+                border-bottom:2px dotted gray;
+            }
+            .last{
+                border-bottom: 2px solid gray;
+            }
+            /*
             .b-dot{
                 border-style: dotted;
                 border-left: 0px;
                 border-right: 0px;
             }
+                */
 
         </style>
 
@@ -73,27 +79,7 @@
                     <td>2025-04-03</td>
                     <td>삭제</td>
                 </tr>                
-                <tr class="b-dot">
-                    <td>123</td>
-                    <td>
-                        <a href>게시판 게시글입니다.</a>
-                    </td>
-                    <td>강수빈</td>
-                    <td>1232</td>
-                    <td>2025-04-03</td>
-                    <td>삭제</td>
-                </tr>
-                <tr class="b-dot">
-                    <td>123</td>
-                    <td>
-                        <a href>게시판 게시글입니다.</a>
-                    </td>
-                    <td>강수빈</td>
-                    <td>1232</td>
-                    <td>2025-04-03</td>
-                    <td>삭제</td>
-                </tr>
-                <tr class="b-dot">
+                <tr>
                     <td>123</td>
                     <td>
                         <a href>게시판 게시글입니다.</a>
@@ -104,6 +90,26 @@
                     <td>삭제</td>
                 </tr>
                 <tr>
+                    <td>123</td>
+                    <td>
+                        <a href>게시판 게시글입니다.</a>
+                    </td>
+                    <td>강수빈</td>
+                    <td>1232</td>
+                    <td>2025-04-03</td>
+                    <td>삭제</td>
+                </tr>
+                <tr>
+                    <td>123</td>
+                    <td>
+                        <a href>게시판 게시글입니다.</a>
+                    </td>
+                    <td>강수빈</td>
+                    <td>1232</td>
+                    <td>2025-04-03</td>
+                    <td>삭제</td>
+                </tr>
+                <tr class="last">
                     <td>123</td>
                     <td>
                         <a href>게시판 게시글입니다.</a>

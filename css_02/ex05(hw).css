@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+table{
+    border-collapse: collapse;
+}
+table>thead{
+    background-color: #d5d5d5;
+}
+table>thead>tr{
+    border-top: 2px solid #000000;
+    border-bottom: 2px solid #000000;
+}
+table>tbody>tr{
+    border-bottom: 2px dotted #000000;
+}
+/*
+.last{
+    border-bottom: 2px solid #000000;
+}
+*/
+
+table>tbody>tr:last-child{
+    border-bottom: 2px solid #000000;
+}
+
+table>tbody>tr:nth-child(2n-1){
+    background-color: aqua;
+}
+/* 나머지 스타일은 알아서 하기*/
