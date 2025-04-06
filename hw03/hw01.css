@@ -1,2 +1,14 @@
 @charset "UTF-8";
 
+body{
+    font-family: 맑은 고딕;
+    font-size: 12px;
+}
+form{
+    width: 700px;
+    
+}
+h1{
+    font-size: 18px;
+    font-weight: bold
+}
