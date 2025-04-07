@@ -5,12 +5,141 @@
         <meta charset="UTF-8"> <!-- 브라우저가 문서를 해석할때 필요한 정보 -->
         <title>스타일시트</title>
         <!-- 스타일시트자리 -->
+        <link rel="stylesheet" href="./ex21.css">
+
     </head>
 
     <body>
+        <div class="wrap">
+            <h3>회원가입</h3>
 
-        
+            <!-- 홈 유저 회원가입 -->
+             
+            <ol>
+                <li>홈</li>
+                <li>유저</li>
+                <li>회원가입</li>
+            </ol>
 
+            <form action="" method="get">
+
+                <!-- 아이디 -->
+                <div class="form-group">
+                    <label for="id" class="form-title">아이디</label>
+                    <input id="id" type="text" placeholder="아이디를 입력하세요" name="id" value="">    
+                </div>
+
+                <!-- 패스워드  -->
+                <div class="form-group">
+                    <label for="pw" class="form-title">패스워드</label>
+                    <input id="pw" type="password" placeholder="패스워드를 입력하세요" name="pw" value="">    
+                </div>
+
+                <!-- 이름 -->
+                <div class="form-group">
+                    <label for="name" class="form-title">이름</label>
+                    <input id="name" type="text" placeholder="이름을 입력하세요" name="name" value="">    
+                </div>
+
+                <!-- 프로필 사진 -->
+                <div class="form-group">
+                    <label for="profile" class="form-title">프로필 사진</label>
+                    <input id="profile" type="file">  
+                </div>
+
+                <!-- 주소 -->
+                <div class="form-group">
+                    <label for="adress" class="form-title">주소</label>
+                    <input id="adress" type="url" name="adress" value="">
+                </div>
+
+                <!-- 이동통신사 -->
+                <div class="form-group">
+                    <label for="telecom" class="form-title">이동통신사</label>
+                    <select id="telecom" name="telecom">
+                        <option>선택해주세요</option>
+                        <option>SKT</option>
+                        <option>KT</option>
+                        <option>LGU+</option>
+                        <option>알뜰통신사</option>
+                    </select>
+                </div>
+                
+                <!-- 나이 -->
+                <div class="form-group">
+                    <span class="form-title">나이</span>
+
+                    <label for="10">10대</label>
+                    <input id="10" type="radio" name="age" value="10" checked>  
+
+                    <label for="20">20대</label>
+                    <input id="20" type="radio" name="age" value="20"> 
+
+                    <label for="30">30대</label>
+                    <input id="30" type="radio" name="age" value="30"> 
+
+                    <label for="40">40대</label>
+                    <input id="40" type="radio" name="age" value="40"> 
+
+                    <label for="etc">기타</label>
+                    <input id="etc" type="radio" name="age" value="etc"> 
+                </div>
+
+                <!-- 혈액형 -->
+                <div class="form-group">
+                    <span class="form-title">혈액형</span>
+
+                    <label for="blood-a">A형</label>
+                    <input id="blood-a" type="radio" name="bloodtype" value="a" checked> 
+
+                    <label for="blood-b">B형</label>
+                    <input id="blood-b" type="radio" name="bloodtype" value="b"> 
+
+                    <label for="blood-o">O형</label>
+                    <input id="blood-o" type="radio" name="bloodtype" value="o"> 
+
+                    <label for="blood-ab">AB형</label>
+                    <input id="blood-ab" type="radio" name="bloodtype" value="ab"> 
+                </div>
+
+                <!-- 취미 -->
+                <div class="form-group">
+                    <span class="form-title">취미</span>
+
+                    <label for="book">독서</label>
+                    <input id="book" type="checkbox" name="hobby" value="book" checked> 
+
+                    <label for="music">음악</label>
+                    <input id="music" type="checkbox" name="hobby" value="music"> 
+
+                    <label for="trip">여행</label>
+                    <input id="trip" type="checkbox" name="hobby" value="trip"> 
+
+                    <label for="movie">영화</label>
+                    <input id="movie" type="checkbox" name="hobby" value="movie"> 
+
+                    <label for="code">코딩</label>
+                    <input id="code" type="checkbox" name="hobby" value="code"> 
+
+                    <label for="etc2">기타</label>
+                    <input id="etc2" type="checkbox" name="hobby" value="etc"> 
+                </div>
+
+                <!-- 자기소개 -->
+                <div class="form-group">
+                    <label for="int" class="form-title">자기소개</label>
+                    <textarea id="int" class=""></textarea>
+                </div>
+                
+
+                <!-- 등록, 초기화 -->
+                <div class="btn-group">
+                    <button type="submit">등록</button>
+                    <button type="reset">초기화</button>
+                </div>
+            </form>
+        </div>
+        <!-- wrap -->
     </body>
 
 </html>
