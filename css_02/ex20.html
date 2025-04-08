@@ -5,6 +5,9 @@
         <meta charset="UTF-8"> <!-- 브라우저가 문서를 해석할때 필요한 정보 -->
         <title>스타일시트</title>
         <!-- 스타일시트자리 -->
+
+         <!-- <link rel="stylesheet" href="./reset.css"> 
+          자주 쓰이는 태그 따로 모아놓고 링크 넣어주기 (배치 순서 중요)-->
          <link rel="stylesheet" href="./ex20.css">
     </head>
 
@@ -13,9 +16,16 @@
             <!-- h1 사이트명, h2 고객센터 -->
             <h3>일반게시판</h3>
             
+            <!-- 홈 게시판 일반게시판  -->
+            <ol class="clearfix">
+                <li>홈</li>
+                <li>게시판</li>
+                <li>일반게시판</li>
+            </ol>
+
+
+
             <form action="" method="get">
-                <!-- 홈 게시판 일반게시판  -->
-                
                 <div class="form-group">
                     <label for="sel-board" class="form-title">게시판선택</label>
                     <select id="sel-board">
@@ -73,7 +83,8 @@
 
                 <!-- 글 내용 -->
                 <div class="form-group">
-                    <textarea></textarea>
+                    <label for="self" class="form-title">자기소개</label>
+                    <textarea id="self"></textarea>
                 </div>
 
                 <!-- 첨부파일 -->

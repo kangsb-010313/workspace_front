@@ -15,7 +15,7 @@
 
             <!-- 홈 유저 회원가입 -->
              
-            <ol>
+            <ol class="clearfix">
                 <li>홈</li>
                 <li>유저</li>
                 <li>회원가입</li>
@@ -49,8 +49,10 @@
 
                 <!-- 주소 -->
                 <div class="form-group">
-                    <label for="adress" class="form-title">주소</label>
-                    <input id="adress" type="url" name="adress" value="">
+                    <label for="add" class="form-title">주소</label>
+                    <input id="add" type="text" placeholder="주소벨류" name="address" value="">
+                    <button>우편번호찾기</button><br>
+                    <input class="txt-add" id="add" type="text" placeholder="주소벨류" name="address" value="">
                 </div>
 
                 <!-- 이동통신사 -->
@@ -61,12 +63,12 @@
                         <option>SKT</option>
                         <option>KT</option>
                         <option>LGU+</option>
-                        <option>알뜰통신사</option>
+                        <option>알뜰통신</option>
                     </select>
                 </div>
                 
                 <!-- 나이 -->
-                <div class="form-group">
+                <div class="form-group form-txt">
                     <span class="form-title">나이</span>
 
                     <label for="10">10대</label>
@@ -86,7 +88,7 @@
                 </div>
 
                 <!-- 혈액형 -->
-                <div class="form-group">
+                <div class="form-group form-txt">
                     <span class="form-title">혈액형</span>
 
                     <label for="blood-a">A형</label>
@@ -103,7 +105,7 @@
                 </div>
 
                 <!-- 취미 -->
-                <div class="form-group">
+                <div class="form-group form-txt">
                     <span class="form-title">취미</span>
 
                     <label for="book">독서</label>

@@ -10,6 +10,13 @@ p, table, th, td, tr{
     margin: 0; padding: 0;
 }
 
+input, select, textarea{
+    font-family: inherit;
+    font-size: inherit;
+}
+
+/* ---------------- */
+
 body{
     background-color: #808080;
     font-family: 맑은 고딕;
@@ -29,6 +36,37 @@ body{
     /* background-color: #fff;
     width: 700px; */
 } 
+
+/* 경로 표시 (빵 부스러기) clearfix  */
+.wrap ol{
+    list-style-type: none;
+    margin: 10px 0px 10px 0px;
+    /* background-color: #f00; */
+}
+.wrap ol>li{
+    float: left;
+    /* border: 1px solid #000; */
+}
+.wrap ol>li::after{
+    content: ">";
+    padding: 0px 5px 0px 5px;
+}
+ol>li:last-child::after{
+    content: "";
+}
+
+.clearfix::before, .clearfix::after {
+    display: block; 
+    content: ""; 
+    line-height: 0;
+}
+.clearfix::after {
+    clear: both;
+}
+
+
+
+
 /* 공통 */
 .form-group{
     margin: 0px 0px 10px 0px;
@@ -40,6 +78,8 @@ body{
 .form-title{
     display: inline-block;
     width: 80px;
+    /* border: 1px solid #000; */
+    vertical-align: top;
 }
 /* .form-group label{
     display: inline-block;
@@ -69,8 +109,11 @@ body{
 
 /* 글 내용 */
 .form-group textarea{
-    width: 685px;
+    width: 400px;
     height: 70px;
+    /* 폰트 강제로 통일
+    font-family: 맑은 고딕;
+    font-size: 12px; */
 }
 
 /* 첨부 파일 */
@@ -86,5 +129,3 @@ body{
     width: 60px;
     height: 30px;
 }
-
-
