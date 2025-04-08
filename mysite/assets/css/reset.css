@@ -31,5 +31,5 @@ ol, ul{
 
 a{
     text-decoration: none;
-    color: inherit;          /*부모색상상속 */
+    color: inherit; /*부모색상상속 */
 }
