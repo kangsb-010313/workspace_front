@@ -1,0 +1,109 @@
+@charset "UTF-8";
+
+/* ---------------------------
+* 게시판관련 페이지에서만 사용(리스트, 등록폼, 수정폼, 읽기)
+------------------------- */
+
+/* 리스트 */
+
+/* 서치-------------------------- */
+#txt-search #search{
+    float: right;
+    margin: 10px 0px 10px 0px;
+}
+#txt-search #search .txt-box{
+    height: 20px;
+    border-radius: 5px;
+}
+#txt-search #search .search-box{
+    width: 50px;
+    height: 25px;
+    border-radius: 5px;
+}
+
+/* 테이블------------------------- */
+#txt-table table{
+    border-collapse: collapse;
+}
+#txt-table thead{
+    background-color: #d6d6d6;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+}
+#txt-table thead th{
+    padding: 10px 0px 10px 0px;
+}
+#txt-table tbody{
+    text-align: center;
+}
+#txt-table tbody tr>td{
+    padding: 7px 0px 7px 0px;
+    border-bottom: 1px solid rgb(196, 196, 196);
+}
+
+/* 페이지------------------------- */
+#txt-page{
+    background-color: gray;
+}
+#page>li{
+    float: left;
+}
+
+
+
+
+
+
+/* 글쓰기버튼-------------------------- */
+#btn-write{
+    background-color: #d6d6d6;
+}
+
+
+
+
+
+
+
+
+/* /리스트 */
+
+
+
+
+
+
+
+
+
+
+/* 글쓰기 등록폼 */
+
+/* /글쓰기 등록폼 */
+
+
+
+
+
+
+
+
+
+/* 수정폼 */
+
+/* /수정폼 */
+
+
+
+
+
+
+
+
+
+
+
+
+/* 읽기 */
+
+/* /읽기 */
