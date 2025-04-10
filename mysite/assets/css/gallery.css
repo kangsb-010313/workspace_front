@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+/* 갤러리 관련 페이지에서만 사용--------
+---------------------------------- */
+
+/* 이미지올리기버튼------------------ */
+#gal-btn>button{
+    float: right;
+    font-size: 12px;
+    padding: 3px 15px 3px 15px;
+    height: 35px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+
+/* /이미지올리기버튼------------------ */
+
+
+
+
+
+/* 갤러리 리스트-------------------- */
+#gal-img{
+    float: left;
+}
+#gal-img>img{
+    width: 150px;
+}
+
+/* /갤러리 리스트-------------------- */
