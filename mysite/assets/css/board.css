@@ -5,7 +5,6 @@
 ------------------------- */
 
 /* 리스트 */
-
 /* 서치-------------------------- */
 #txt-search #search{
     float: right;
@@ -20,6 +19,9 @@
     height: 25px;
     border-radius: 5px;
 }
+/* /서치-------------------------- */
+
+
 
 /* 테이블------------------------- */
 #txt-table table{
@@ -36,36 +38,47 @@
 #txt-table tbody{
     text-align: center;
 }
+#txt-table tbody tr:hover{
+    background-color: #ff0;
+}
 #txt-table tbody tr>td{
     padding: 7px 0px 7px 0px;
     border-bottom: 1px solid rgb(196, 196, 196);
 }
+/* /테이블------------------------- */
+
+
 
 /* 페이지------------------------- */
 #txt-page{
-    background-color: gray;
+    /* background-color: gray; */
+    width: 798px;
 }
-#page>li{
+#txt-page #page{
+    /* border: 1px solid #000; */
+    width: 300px;
+    margin: 0px auto;
+    /* text-align: center; */
+    padding: 3px 3px 3px 3px;
+    font-size: 15px;
+}
+#txt-page #page li{
     float: left;
+    padding: 3px 10px 3px 10px;
+    /* text-align: center; */
 }
+/* /페이지------------------------- */
 
 
 
-
-
-
-/* 글쓰기버튼-------------------------- */
+/* list글쓰기버튼-------------------------- */
 #btn-write{
-    background-color: #d6d6d6;
+    float: right;
 }
-
-
-
-
-
-
-
-
+#btn-write .write{
+    padding: 3px 15px 3px 15px;
+}
+/* /list글쓰기버튼-------------------------- */
 /* /리스트 */
 
 
@@ -73,16 +86,95 @@
 
 
 
+/* 읽기 */
+/* read테이블 ------------------------------*/
+#read-table{
+    border-bottom: 1px solid #000;
+    height: 100px;
+    padding-top: 20px;
+    
+}
+#read-table .rd-table tbody th{
+    text-align: left;
+    font-weight: lighter;
+}
+#read-table .rd-table tbody td{
+    padding-left: 30px;
+}
+/* /read테이블 ------------------------------*/
+
+
+
+/* read텍스트------------------------------- */
+#read-text{
+    padding: 10px 0px 10px 10px;
+    border-bottom: 1px solid #000;
+}
+/* /read텍스트------------------------------ */
+
+
+
+/* read버튼--------------------------------- */
+#btn-read #rd-btn{
+    float: right;
+}
+#btn-read #rd-btn>li{
+    float: left;
+    background-color: #d6d6d6;
+    border: 1px solid rgb(153, 153, 153);
+    margin: 10px 0px 15px 10px;
+    padding: 3px 15px 3px 15px;
+    border-radius: 3px;
+}
+/* /read버튼-------------------------------- */
+/* /읽기 */
 
 
 
 
-/* 글쓰기 등록폼 */
-
-/* /글쓰기 등록폼 */
 
 
+/* 글쓰기 */
+/* write 제목------------------------------ */
+#write-title{
+    /* border: 1px solid #000; */
+    height: 50px;
+    line-height: 55px;
+}
+#write-title #txt-name{
+    width: 741px;
+    height: 30px;
+    margin-left: 25px;
+    border-radius: 3px;
+}
+/* /write 제목------------------------------ */
 
+
+
+/* write textarea--------------------------- */
+#write-area textarea{
+    width: 798px;
+    height: 300px;
+    border-radius: 3px;
+}
+/* /write textarea--------------------------- */
+
+
+
+/* 등록 취소 버튼------------------------------ */
+#write #write-btn{
+    float: right;
+}
+#write #write-btn>li{
+    float: left;
+    border: 1px solid #000;
+    background-color: #dddddd;
+    padding: 3px 15px 3px 15px;
+    margin: 3px 0px 15px 10px;
+    border-radius: 3px;
+}
+/* /등록 취소 버튼----------------------------- */
+/*/글쓰기 */
 
 
 
@@ -90,6 +182,10 @@
 
 
 /* 수정폼 */
+
+
+
+
 
 /* /수정폼 */
 
@@ -102,8 +198,3 @@
 
 
 
-
-
-/* 읽기 */
-
-/* /읽기 */

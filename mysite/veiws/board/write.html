@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>MySite</title>
+
+        <link rel="stylesheet" href="../../assets/css/reset.css">
+        <link rel="stylesheet" href="../../assets/css/mysite.css">
+        <link rel="stylesheet" href="../../assets/css/board.css">
+
+    </head>
+
+
+    <body>
+        <div id="wrap">
+            <!-- 사이트 헤더 -->
+            <div id="header" class="clearfix">
+                <h1>MySite</h1>
+
+                <ul class="clearfix">
+                    <li>
+                        <a href="">로그인</a>
+                    </li>
+                    <li>
+                        <a href="">회원가입</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- 사이트 내비 -->
+            <div id="nav">
+                <ul  class="clearfix">
+                    <li>입사지원서</li>
+                    <li>게시판</li>
+                    <li>갤러리</li>
+                    <li>방명록</li>
+                </ul>
+            </div>
+
+            <div id="content2" class="clearfix">
+
+                <!-- 사이트 어사이드  -->
+                <div id="aside">
+                    <h2>게시판</h2> <!--css가운데 배치 단점: 간격 항상 맞춰줘야함, 줄바꿈 시 틀어짐-->
+                   
+                    <ul>
+                        <li>일반게시판</li>
+                        <li>댓글게시판</li>
+                    </ul>
+                </div>
+
+                <!-- 사이트 메인 -->
+                <div id="main">
+
+                    <!-- 메인 헤드 -->
+                    <div id="main-head" class="clearfix">
+                        <h3>일반게시판</h3>
+                        <ol class="clearfix">
+                            <li>홈</li>
+                            <li>게시판</li>
+                            <li>일반게시판</li>
+                        </ol>
+                    </div>
+
+                    <div id="write-title">
+                        <label class="txt-title" for="txt-name">제목</label>
+                        <input id="txt-name" placeholder=" 제목을 입력해 주세요" type="text">
+                    </div>
+
+                    <div id="write-area">
+                        <textarea></textarea>
+                    </div>
+
+                    <div id="write" class="clearfix">
+                        <ul id="write-btn">
+                            <li>
+                                <a href="">등록</a>
+                            </li>
+                            <li>
+                                <a href="">취소</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+                <!-- /main -->
+            </div>
+            <!-- content2 -->
+             
+                    <div id="footer">
+                        <p>
+                            Copyright ⓒ 2020 황일영. All right reserved
+                        </p>
+                    </div>
+
+        </div>
+        <!-- /wrap -->
+    </body>
+</html>
