@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+/* 메인페이지에서만 사용---------
+---------------------------- */
+
+
+/* 콘텐츠 */
+
+#content img{
+    width: 300px;
+    height: 300px;
+    margin-right: 40px;
+}
+#content div{
+    font-size: 17px;
+    margin-bottom: 50px;
+}
+#content .txt-bold{
+    font-weight: bold;
+}
