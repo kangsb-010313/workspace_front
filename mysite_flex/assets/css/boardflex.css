@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+/* 리스트 검색버튼 */
+main #list-search{
+    padding: 15px 0px 3px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+main #list-search input{
+    width: 120px;
+    height: 20px;
+}
+main #list-search button{
+    padding: 0px 10px 0px 10px;
+    margin-left: 3px;
+}
