@@ -1,0 +1,64 @@
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>javaScript</title>
+
+    </head>
+
+    <body>
+        <h1>자바스크립트</h1>
+
+        <script>
+            console.log('=======================================');
+            console.log('#자바의 리스트 개념(과제)');
+
+            let mainList = [];
+
+            let triangleVO = {
+                name: '삼각형',
+                width: 5,
+                height: 10,
+                area: function(){
+                    console.log('삼각형의 넓이는 = ' + this.width * this.height/2);
+                }
+            };
+
+            let rectangleVO = {
+                name: '사각형',
+                width: 5,
+                height: 5,
+                area: function(){
+                    console.log('사각형의 넓이는 = ' + this.width * this.height);
+                }
+            };
+            
+            let circleVO = {
+                name: '원',
+                radius: 5,
+                area: function(){
+                    console.log('원의 넓이는 = ' + 3.14*(this.radius * this.radius));
+                }
+            };
+
+            mainList.push(triangleVO);
+            mainList.push(rectangleVO);
+            mainList.push(circleVO);
+            console.log(mainList);
+
+            for(let i=0; i<mainList.length; i++){
+                if(typeof mainList[i].area === 'function'){
+                    mainList[i].area();
+                }else {
+                    console.log(mainList[i]);
+                }
+            }
+
+        </script>
+    </body>
+
+</html>
+
+
+
+
+
