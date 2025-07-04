@@ -35,12 +35,106 @@
 
 	<p id="p01">자바<strong>스크립트</strong></p>
 	<p id="p02">자바<strong>스크립트</strong></p>
-</body>
+
+<!-- ---------------------------------------------------------- -->
 
 <script>
+
+//#nav의 태그명이 뭔지 알고싶다
+let tag01 = document.querySelector('#nav');
+console.log(tag01);
+console.log(tag01.tagName); //#nav의 태그네임 --> 대문자
+
+//target='_blank'의 태그네임
+let tag02 = document.querySelector('a[target="_blank"]');
+console.log(tag02);
+console.log(tag02.tagName);
+
+//div의 id => 지금은 div가 한 개 밖에 없음
+let tag03 = document.querySelector('div');
+console.log(tag03);
+console.log(tag03.id);
+
+//li태그 가져와서 각각의 id 출력하기
+let tag04s = document.querySelectorAll('li');
+console.log(tag04s);
+for(let i=0; i<tag04s.length; i++){
+	console.log(tag04s[i].id);
+}
+
+//클래스명 알아내기
+//라벨을 가져와서 각각의 클래스명을 출력하세요
+let tag05s = document.querySelectorAll('label');
+console.log(tag05s);
+for(let i=0; i<tag05s.length; i++){
+	console.log(tag05s[i].className);
+}
+
+//a요소 가져와서 클래스명을 출력하세요 --> class명이 없는 경우
+let tag06 = document.querySelector('a');
+console.log(tag06);
+console.log(tag06.className); //오류가 나는게 아니고 안 찍음 (빈칸)
+console.log('-------------------------------');
+
+//기타속성 알아내기
+//<input id="txt-userId" class="form-txt" type="text" name="userId" value="jung" placeholder="아이디를 입력해주세요"><br>
+let tag07 = document.querySelector('#txt-userId');
+console.log(tag07);
+
+console.log(tag07.id); //id
+console.log(tag07.className); //클래스명
+console.log(tag07.tagName);	//태그명 --> 대문자
+
+console.log(tag07.type);	//type
+console.log(tag07.placeholder); // 아이디를 입력해주세요
+console.log(tag07.name); // name
+console.log(tag07.value); // value
+console.log('-------------------------------');
+
+//기타속성 알아내기
+//<a href="https://www.naver.com" target="_blank">네이버</a>
+let tag08 = document.querySelector('a');
+console.log(tag08);
+console.log(tag08.id);
+console.log(tag08.className);
+console.log(tag08.tagName);
+console.log(tag08.target);
+console.log(tag08.href);
+console.log(tag08.innerHTML); //네이버
+console.log(tag08.innerText); //네이버
+
+//innerHTML, innerText 차이
+//<li id="gallery" class="active"><span>갤</span>러리</li>
+let tag09 = document.querySelector('#gallery');
+console.log(tag09);
+console.log(tag09.innerHTML);	//요소(태그) 살려서 그대로 가져옴
+console.log(tag09.innerText);	//오직 텍스트만 가져옴
+
+//<h1>자바<strong>스크립트</strong></h1>
+let tag10 = document.querySelector('h1');
+console.log(tag10);
+console.log(tag10.innerHTML);	//요소(태그) 살려서 그대로 가져옴
+console.log(tag10.innerText);	//오직 텍스트만 가져옴
+
+
+/*
+<ul>
+	<li id="board"><span>게</span>시판</li>
+	<li id="gallery" class="active"><span>갤</span>러리</li>
+	<li id="board"><span>방</span>명록</li>
+</ul>
+*/
+let tag11 = document.querySelector('ul');
+console.log(tag11);
+console.log(tag11.innerHTML);	//요소(태그) 살려서 그대로 가져옴
+console.log(tag11.innerText);	//오직 텍스트만 가져옴
+
 
 
 
 </script>
+
+</body>
+
 
 </html>

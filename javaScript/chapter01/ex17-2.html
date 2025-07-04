@@ -1,0 +1,72 @@
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>JavaScript</title>
+
+    </head>
+
+    <body>
+        <h1>자바스크립트</h1>
+        <script>
+            console.log('=====================================');
+            console.log('# 자바의 리스트 개념 연습문제');    
+
+            //배열선언(리스트 개념)
+            let shapeList = [];
+
+            //삼각형
+            let triangle = {
+                name: '삼각형', 
+                width: 5,
+                height: 10,
+                area: function(){
+                    let calArea = this.width * this.height /2;
+                    return calArea;
+                }
+            }
+
+            //사각형
+            let rectangle = {
+                name: '사각형',
+                height: 5,
+                area:  function(){
+                    let calArea = this.width * this.height;
+                    return calArea;
+                }
+            }
+            rectangle.width = 5;  //필드를 추가할 수 있다
+          
+            //원
+            let circle = {};
+            circle.name = '원';
+            circle.radius = 5;
+            circle.area = function(){
+                let calArea = 3.14*this.radius*this.radius;
+                return calArea;
+            };
+
+            //배열에 도형 넣기
+            shapeList.push(triangle);
+            shapeList.push(rectangle);
+            shapeList.push(circle);
+
+            //콘솔로 출력하기(개발용)
+            console.log(shapeList);
+
+            //출력해보기
+            for(let i=0; i<shapeList.length; i++){
+                let str = shapeList[i].name + '의 넓이는' + ' = ' + shapeList[i].area();
+                console.log(str);
+            }
+            
+
+        </script>
+            
+
+
+
+
+    </body>
+
+
+</html>

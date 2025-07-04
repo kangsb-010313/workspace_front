@@ -21,13 +21,34 @@
 <!-- ------------------------------------------------ -->
 <script>
 //돔트리 완료되었을 때 
+//html은 document에서 관리 --> html 초벌구이가 완료 되었을 때
 document.addEventListener('DOMContentLoaded', function(){
 
-	console.log('돔트리 완료');
+	console.log('돔트리 완료 -- 페인팅 되기 전');
+
+	//id로 찾기  ////////////////////////////////////////////////
+
+	//id="second" 를 빨강색
+	let seTag = document.getElementById('second');
+	seTag.style.color = '#f00';
+
+	//id="third" 를 파란색
+	let thTag = document.getElementById('third');
+	thTag.style.color = '#00f';
+
+	//id="fourth" 를 초록색
+	let foTag = document.getElementById('fourth');
+	foTag.style.color = '#0f0';
+
+	//id="first" 를 분홍색	
+	// //동일한 id가 존재 --> 맨 위에 1개만 적용
+	let fiTag = document.getElementById('first');
+	fiTag.style.color = '#f0f'
 
 });
 
 //페인팅까지 완료되었을 때
+//브라우저 전체창(window) 기준으로 모든 준비가 완료되었을 때 --> 화면에 그려졌을 때
 window.addEventListener('load', function(){
 
 	console.log('페인팅까지 완료');
@@ -41,9 +62,5 @@ window.addEventListener('load', function(){
 <!-- ------------------------------------------------ -->
 
 </body>
-
-<script>
-
-</script>
 
 </html>

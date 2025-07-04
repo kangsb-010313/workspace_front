@@ -49,10 +49,89 @@
 			</tr>
 		</tbody>
 	</table>
+<!-- ---------------------------------------------------------- -->
+<script>
+//돔트리가 완성되었을 때
+document.addEventListener('DOMContentLoaded', function(){
+
+	console.log('돔트리 완료');
+
+	//부모 찾기
+	let tag01 = document.querySelector('h1');
+	console.log(tag01);
+	console.log(tag01.parentElement); //부모
+	console.log(tag01.parentElement.parentElement);	//부모의 부모
+
+
+	console.log('-------------------------------------------');
+	//class="red"의 부모의 id값을 출력하세요 => content
+	let tag02 = document.querySelector('.red');
+	console.log(tag02);
+	console.log(tag02.parentElement);
+	console.log(tag02.parentElement.id);
+
+
+	console.log('-------------------------------------------');
+	//id="n-3"
+	/*
+	let tag03 = document.querySelector('#n-3');
+	console.log(tag03);
+	console.log(tag03.parentElement);
+	*/
+	let tag03 = document.querySelector('#n-3').parentElement;
+	console.log(tag03);
+
+
+	console.log('-------------------------------------------');
+	let tag04 = document.querySelector('#n-2');
+	console.log(tag04);
+
+	//#n-2 위치일때  본인의 tr의 id값 출력
+	console.log(tag04.id);
+	
+	let id = tag04.id;
+	console.log(id);
+   
+  	//#n-2 위치일때  이효리 이름출력  
+	console.log(tag04.firstElementChild.innerText); 
+
+   	//#n-2 위치일때  이효리 회사번호
+	console.log(tag04.lastElementChild.innerText);
+   
+   	//#n-2 위치일때  정우성 회사번호   
+	console.log(tag04.previousElementSibling.lastElementChild.innerText);
+   	//#n-2 위치일때  박명수 이름출력
+	console.log(tag04.nextElementSibling.firstElementChild.innerText);
+
+	console.log('-------------------------------------------');
+	let tag05 = document.querySelector('#h-2');
+	console.log(tag05);
+
+   	//#h-2 위치일때  정우성 회사번호  
+	//부모로 이동 -> 부모의 이전형제 -> 마지막 자식 -> 텍스트값 가져오기
+	console.log(tag05.parentElement.previousElementSibling.lastElementChild.innerText);
+
+   	//#h-2 위치일때  박명수 이름출력
+	console.log(tag05.parentElement.nextElementSibling.firstElementChild.innerText);
+
+
+
+
+
+
+
+
+
+
+
+});
+
+
+
+</script>
+
+
 
 </body>
-
-<script>
-</script>
 
 </html>

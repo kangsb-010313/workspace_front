@@ -36,11 +36,88 @@
 		
 		<button type="submit">전송</button>
 	</form>
-</body>
+
+<!-- ---------------------------------------------------------- -->
 
 <script>
+document.addEventListener('DOMContentLoaded', function(){
 
+	console.log('돔트리 완성 -- 실행되는 순서를 머리에서 다시 생각해보기');
+
+	/**************************************************
+	 * document.querySelector() ==> 요소1개 가져오기
+	 * ***********************************************/
+
+	//1개 가져오기
+	let h1Tag = document.querySelector('h1');
+	console.log(h1Tag);
+	h1Tag.style.color = '#f00';
+
+	//li 가져오기 ==> 여러개면 맨 위 1개만 가져온다
+	let liTag = document.querySelector('li'); 
+	console.log(liTag);
+
+
+
+	/**************************************************
+	 * document.querySelectorAll() ==> 요소 여러개 가져오기
+	 * ***********************************************/
+
+	 //li요소 모두 파란색으로 
+	let liTags = document.querySelectorAll('li');
+	console.log(liTags);
+
+	for(let i=0; i<liTags.length; i++){
+		liTags[i].style.color = '#00f';
+	}
+
+
+
+	/*******************************************************
+	 * document.querySelector(), document.querySelectorAll(선택자)
+	 * ****************************************************/
+
+	//클래스명으로 가져오기 .className
+
+	/* 비교해볼것
+	let actTags - document.getElementsByClassName('active');
+	console.log(actTags[0]);
+	*/
+
+	//let actTag = document.querySelector('.active');
+	let actTag = document.querySelector('#nav ul>li.active');
+	console.log(actTag);
+	actTag.style.color = '#f00';
+
+	//li요소와 label요소 초록색으로
+	let lilaTags = document.querySelectorAll('#nav ul>li, label');
+	console.log(lilaTags);
+
+	for(let i=0; i<lilaTags.length; i++){
+		lilaTags[i].style.color = '#0f0';
+	}
+	
+	//name="userId"인 요소를 빨강으로
+	let txtTag = document.querySelector('input[name="userId"]');
+	console.log(txtTag);
+	txtTag.style.color = '#f00';
+
+	//마지막 li요소를 빨강
+	/*
+	let liEls = document.querySelectorAll('li');
+	console.log(liEls);
+	liEls[2].style.color = '#f00';
+	liEls[liEls.length-1].style.color = '#f00';
+	*/
+	let liEl = document.querySelector('li:last-child');
+	console.log(liEl);
+	liEl.style.color = '#f00';
+
+
+});
 
 </script>
+
+</body>
 
 </html>
