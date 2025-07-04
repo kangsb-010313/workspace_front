@@ -61,6 +61,24 @@ document.addEventListener('DOMContentLoaded', function(){
 	//배열선언
 	let personList = [];
 
+	for(let i=0; i<lists.length; i++){
+
+		let lists2 = lists[i].querySelectorAll('td'); //tr의 모든 td 가져오기
+		console.log(lists2);
+
+		let personVO = {};
+		personVO.name = lists2[0].innerText; // 각 td의 0번 방
+		personVO.hp = lists2[1].innerText;	 // 각 td의 1번 방
+		personVO.company = lists2[2].innerText; //각 td의 2번 방
+
+		personList.push(personVO); //주소 넣기
+
+	}
+
+	console.log(personList);
+
+
+	/*
 	let personVO01 = {
 		name: '정우성',
 		hp: '010-1111-1111',
@@ -78,7 +96,7 @@ document.addEventListener('DOMContentLoaded', function(){
 		hp: '010-3333-3333',
 		company: '02-3333-3333'
 	}
-
+	*/
 
 
 
