@@ -30,8 +30,8 @@ document.addEventListener('DOMContentLoaded', function(){
     let btnTag = document.querySelector('#btn');
 
     //버튼이 클릭되었을(때 --> 이벤트)
-    btn.addEventListener('click', function(){
-        console.log('버튼클릭');
+    btnTag.addEventListener('click', function(){
+        console.log('클릭');
 
         //h1요소를 잡아온다
         let h1Tag = document.querySelector('#display');
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function(){
         //-글자 색을 파란색으로 적용
         h1Tag.textContent = '홍길동';
         h1Tag.style.color = '#00f';
-        
+
     });
 
 });

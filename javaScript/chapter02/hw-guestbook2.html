@@ -15,11 +15,14 @@
     <div>
 		<table border="1" width="540px">
 			<tr>
-				<td>이름</td><td><input type="text" name="name"></td>
-				<td>비밀번호</td><td><input type="password" name="pw"></td>
+				<td>이름</td>
+				<td><input type="text" name="name"></td>
+				<td>비밀번호</td>
+				<td><input type="password" name="pw"></td>
 			</tr>
 			<tr>
-				<td colspan="4"><textarea cols="72" rows="5" name="content"></textarea></td>
+				<td colspan="4">
+				<textarea cols="72" rows="5" name="content"></textarea></td>
 			</tr>
 			<tr>
 				<td colspan="4"><button id="btnWrite" type="button">등록</button></td>
@@ -28,19 +31,46 @@
 	</div>
 	<br>
 
-</body>
-
+<!-- ---------------------------------------------------------- -->
 <script>
+document.addEventListener('DOMContentLoaded', function(){
+
+	console.log('돔트리 완료');
+
+	let btn = document.querySelector('#btnWrite');
+
+	btn.addEventListener('click', function(){
+
+		console.log('버튼클릭');
+
+		let guestbookList = [];
+
+		let nameTag = document.querySelector('input[name="name"]');
+		let pwTag = document.querySelector('input[name="pw"]');
+		let contentTag = document.querySelector('textarea[name="content"]');
+
+		let name = nameTag.value;
+		let pw = pwTag.value;
+		let content = contentTag.value;
+
+		let guestbookVO = {
+			name: name,
+			pw: pw,
+			content: content
+		};
+
+		console.log(guestbookVO);
 
 
+	});
 
 
-
-
-
-
-
+});
 
 </script>
+
+</body>
+
+
 
 </html>
