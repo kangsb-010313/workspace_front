@@ -50,33 +50,44 @@
 		</tbody>
 	</table>
 
+<!-- ---------------------------------------------------------- -->
 <script>
 document.addEventListener('DOMContentLoaded', function(){
 
 	console.log('돔트리 완료');
 
-	let lists = document.querySelectorAll('tbody tr');
-	console.log(lists);
-
 	//배열선언
 	let personList = [];
 
-	for(let i=0; i<lists.length; i++){
+	let trTags = document.querySelectorAll('tbody tr');
+	/*
+	console.log(trTags);
+	console.log(trTags[0].children);
+	console.log(trTags[0].children[0].innerText);
+	*/
 
-		let lists2 = lists[i].querySelectorAll('td'); //tr의 모든 td 가져오기
-		console.log(lists2);
 
-		let personVO = {};
-		personVO.name = lists2[0].innerText; // 각 td의 0번 방
-		personVO.hp = lists2[1].innerText;	 // 각 td의 1번 방
-		personVO.company = lists2[2].innerText; //각 td의 2번 방
+	for(let i=0; i<trTags.length; i++){
+		//데이터 추출
+		let name = trTags[i].children[0].innerText;
+		let hp = trTags[i].children[1].innerText;
+		let company = trTags[i].children[2].innerText;
 
-		personList.push(personVO); //주소 넣기
+		let personVO = {
+			name: name,
+			hp: hp,
+			company: company
+		};
 
+		//객체(vo)를 배열에 추가한다
+		personList.push(personVO);
 	}
 
 	console.log(personList);
 
+	for(let i=0; i<personList.length; i++){
+		console.log(personList[i].name + '')
+	}
 
 	/*
 	let personVO01 = {
@@ -97,25 +108,7 @@ document.addEventListener('DOMContentLoaded', function(){
 		company: '02-3333-3333'
 	}
 	*/
-
-
-
-
-
-
-
-
-
-
-
-
-
 });
-
-
-
-
-
 
 </script>
 
