@@ -20,10 +20,62 @@
         <button id="btnPlus" type="button" >더하기</button>
         <p id="display">0</p>
     </div>
-</body>
 
+<!-- ---------------------------------------------------------- -->
 <script>
+/*
+<-- 돔이 완료되었을 때
+#버튼을 잡아온다
+버튼을 클릭할 때 
+    - 첫번째 창의 value값 가져오기
+    - 두번째 창의 value값 가져오기
+    - 둘 더하기
+    - p요소에 더한 값 적용하기 
+*/
+
+//돔트리가 완료 되었을 때
+document.addEventListener('DOMContentLoaded', function(){
+
+    console.log('돔트리 완료');
+
+    //버튼에 이벤트 등록(*버튼 잡아온다)
+    let btnTag = document.querySelector('#btnPlus');
+    //console.log(btnTag);
+
+    //버튼 클릭할 때
+    btnTag.addEventListener('click', function(){
+
+        console.log('버튼 클릭');
+
+        //첫번째 창의 value값 가져오기
+        let leftTag = document.querySelector('#left');
+        let leftNo = Number.parseInt(leftTag.value); //string --> number로 변경
+        //console.log(typeof leftNo);
+        
+        //두번째 창의 value값 가져오기
+        let rightTag = document.querySelector('#right');
+        let rightNo = Number.parseInt(rightTag.value);
+
+        //둘 더하기
+        let sum = leftNo + rightNo;
+        console.log(sum);
+
+        //p요소에 더한 값 적용하기 
+        let pTag = document.querySelector('#display');
+        pTag.textContent = sum;
+        
+        //입력창을 비우기 (비운게 아니고 아무것도 없는 값을 넣어준거임)
+        leftTag.value = '';
+        rightTag.value = '';
+
+    });
+
+});
+
 
 </script>
+
+</body>
+
 
 </html>

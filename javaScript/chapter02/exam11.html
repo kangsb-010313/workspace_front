@@ -60,11 +60,39 @@
 	<p id="p13">문장1</p>
 	<p id="p14">문장2</p>
 
+<!-- ---------------------------------------------------------- -->
+<script>
+document.addEventListener('DOMContentLoaded', function(){
 
+	console.log('돔트리 완료');
+
+	let p11Tag = document.querySelector('#p11');
+	console.log(p11Tag);
+	console.log(p11Tag.innerHTML);
+	console.log(p11Tag.textContent);
+	//console.log(p11Tag.innerText); // innerText(x) --> textContetnt(o)
+
+	//#p13태그에 텍스트를 --> "<strong>가나다라마바사아자차카타파하</strong>"
+	//<p id="p13">문장1</p>
+	//<p id="p13"><strong>가나다라마바사아자차카타파하</strong></p>
+	let t13Tag = document.querySelector('#p13');
+	t13Tag.textContent = '<strong>가나다라마바사아자차카타파하</strong>'; //html글자로 출력
+
+	let t14Tag = document.querySelector('#p14'); 
+	t14Tag.innerHTML = '<strong>가나다라마바사아자차카타파하</strong>'; //html반영
+	//읽어올 때는 textContent, 쓸 때는 innerHTML, innerText는 이제 쓰지 말기!!!
+
+	//요소의 값(content --> 글자)을 없애는 법
+	let t01Tag = document.querySelector('#p1');
+	console.log(t01Tag)
+	t01Tag.textContent = '';
+
+
+});
+
+</script>
 
 </body>
 
-<script>
-</script>
 
 </html>

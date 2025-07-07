@@ -57,6 +57,15 @@ document.addEventListener('DOMContentLoaded', function(){
 	let divTag = document.querySelector('div');
 	console.log(divTag);
 	console.log(divTag.className);
+	console.log(divTag.classList);
+
+	//box-red를 box-blue로 변경 => box-red를 삭제하고 box-blue를 추가한다
+	//divTag.classList.add('box-blue'); //바뀐게 아니고 추가된 것 --> 맨 마지막이 blue여서 적용된 것
+
+	divTag.classList.remove('box-red');
+	divTag.classList.add('box-blue');
+
+	divTag.classList.replace('bold', 'italic');
 
 });
 	
