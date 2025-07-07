@@ -42,12 +42,36 @@
     </table>
     <br>
 
-</body>
 
 <script>
+document.addEventListener('DOMContentLoaded', function(){
+    console.log('돔트리 완료');
 
+    let btn = document.querySelector('#btnMakeNo');
+
+    btn.addEventListener('click', function(){
+        console.log('버튼클릭');
+
+        //배열선언
+        let numbers = [];
+
+        let n = Number.parseInt(Math.random()*45) + 1;
+        //console.log(n);
+
+        while(numbers.lenght < 6){
+            break;
+        }
+
+
+
+    });
+
+});
 
 
 </script>
+
+</body>
+
 
 </html>
