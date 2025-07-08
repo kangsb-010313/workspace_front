@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>자바스크립트</title>
+    <style>
+    ul{
+        background-color: #f0f;
+        padding: 10px;
+        width: 300px;
+    }
+
+    ul>li{
+        border: 1px solid #000;
+        background-color: #fff;
+    }
+    </style>
+</head>
+
+<body>
+
+    <ul> <!--begin-->
+        <!-- afterbegin -->
+        <li>첫번째 아이템 입니다.</li>
+        <li>두번째 아이템 입니다.</li>
+        <li>세번째 아이템 입니다.</li>
+        <li>네번째 아이템 입니다.</li>
+        <li>다섯번째 아이템 입니다.</li>
+        <li>여섯번째 아이템 입니다.</li>
+        <li>일곱번째 아이템 입니다.</li>
+        <li>여덟번째 아이템 입니다.</li>
+        <li>아홉번째 아이템 입니다.</li>
+        <li>열번째 아이템 입니다.</li>
+        <!-- befoeend -->
+    </ul> <!--end-->
+
+<!-- -------------------------------------------------------------- -->
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+
+    console.log('돔트리 완료');
+
+    /*1개씩 이벤트를 등록하면 10개 해야됨. 리스트가 추가되면 이벤트 등록이 어렵다
+    let p01 = document.querySelector('#p01');
+    p01.addEventListener('click', function(){
+        console.log('클릭');
+    });
+    */
+
+    let liTags = document.querySelectorAll('li');
+    console.log(liTags);
+    for(let i=0; i<liTags.length; i++){
+        liTags[i].addEventListener('click', function(event){
+            console.log(i + '-li태그 삭제');
+            this.remove();     //삭제
+            //this.innerHTML = ''; //비워진 것처럼 효과내는 것
+        
+            //두 개는 다른 값이다(지금 상황에서는 같다)
+            console.log(this);          //이벤트리스너가 있는 태그(요소)
+            console.log(event.target);  //사용자가 실제로 클릭한 태그(요소)
+        
+        });
+    }
+
+
+});
+
+
+
+</script>
+    
+</body>
+
+</html>

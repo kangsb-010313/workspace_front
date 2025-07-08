@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>자바스크립트</title>
+    <style>
+    ul{
+        background-color: #f0f;
+        padding: 10px;
+        width: 300px;
+    }
+
+    ul>li{
+        border: 1px solid #000;
+        background-color: #fff;
+    }
+    </style>
+</head>
+
+<body>
+    <ul> <!--begin-->
+        <!-- afterbegin -->
+        <li>첫번째 아이템 입니다.</li>
+        <li>두번째 아이템 입니다.</li>
+        <li>세번째 아이템 입니다.</li>
+        <li>네번째 아이템 입니다.</li>
+        <li>다섯번째 아이템 입니다.</li>
+        <!-- befoeend -->
+    </ul> <!--end-->
+
+    <button id="btn" type="button">뒤에 추가</button>
+<!-- -------------------------------------------------------------- -->
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+
+    console.log('돔트리 완료');
+
+    
+    let btn = document.querySelector('#btn');
+    console.log(btn);
+    //뒤에 추가
+    btn.addEventListener('click', function(){
+
+        console.log('뒤 버튼클릭');
+
+        let ulTag = document.querySelector('ul');
+        console.log(ulTag);
+        ulTag.insertAdjacentHTML('beforeend', '<li>뒤에 추가된 아이템입니다.</li>');
+        
+    });
+    
+    
+    //li태그 이벤트 등록(클릭한 li태그 삭제)
+    // let liTags = document.querySelectorAll('li');
+    // console.log(liTags);
+    // for(let i=0; i<liTags.length; i++){
+    //     //반복문 돌면서 각각의 li태그에 이벤트를 등록해준다
+    //     liTags[i].addEventListener('click', function(event){
+
+    //         console.log(i + '클릭');
+    //         this.remove();
+            
+    //         //지금 상황에서는 같다 --> 두 개는 다를 수도 있다
+    //         console.log(this);          //이벤트리스너가 있는 태그(요소)
+    //         console.log(event.target);  //사용자가 실제로 클릭한 태그(요소)
+
+    //     });
+    
+    // }
+    
+    //ul태그를 클릭했을 때 --> li태그 위임
+    //---> 추가된 li는 클릭이벤트 등록이 안된다!!!
+    //부모(ul요소)에 클릭 이벤트(할 일)를 등록해준다 
+    //이벤트가 발생하면 할 일은 자식에게 !!!위임(전달)!!!해라 
+    let ulTag = document.querySelector('ul');
+    console.log(ulTag);
+    ulTag.addEventListener('click', function(event){
+        console.log('ul 클릭');
+
+        //두 개가 다른 경우 (ul, li)
+        console.log(this);          //이벤트리스너가 있는 태그(요소)
+        console.log(event.target);  //사용자가 실제로 클릭한 태그(요소)
+        console.log(event.target.tagName); //실제로 클릭한 태그네임(대문자로 출력됨!!!)
+
+        if(event.target.tagName == 'LI'){
+            console.log('li태그 클릭');
+            event.target.remove();
+        }
+
+    });
+
+
+
+});
+
+
+
+</script>
+    
+</body>
+
+</html>
