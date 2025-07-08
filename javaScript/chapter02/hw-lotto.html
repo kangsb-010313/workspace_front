@@ -42,36 +42,53 @@
     </table>
     <br>
 
-
+<!----------------------------------------------------->
 <script>
 document.addEventListener('DOMContentLoaded', function(){
-    console.log('돔트리 완료');
+    console.log('완료');
 
-    let btn = document.querySelector('#btnMakeNo');
+    //등록버튼 가져오기
+    let btnMakeNo =  document.querySelector('#btnMakeNo');
+    
+    //등록버튼에 이벤트 등록
+    btnMakeNo.addEventListener('click', function(){
+        console.log('클릭');
+        
+        //로또번호 배열
+        let lottoArr = [];
 
-    btn.addEventListener('click', function(){
-        console.log('버튼클릭');
+        //번호를 생성해서 배열에 추가
+        while(true){
+            //배열에 숫자가 6개를 넘으면 탈출
+            if(lottoArr.length >= 6){
+                break;
+            }
 
-        //배열선언
-        let numbers = [];
-
-        let n = Number.parseInt(Math.random()*45) + 1;
-        console.log(n);
-
-        while(numbers.lenght < 6){
-            break;
+            //배열에 방금 뽑은 숫자가 없으면 배열에 추가
+            let no = Math.floor(Math.random()*45)+1;
+            console.log(no);
+            if(!lottoArr.includes(no)){  //includes() 메소드 찾아보기
+                lottoArr.push(no);
+            }
         }
 
-
-
+        //숫자를 출력할 곳 td요소 6개를 가져온다
+        let tdTags = document.querySelectorAll('tbody>tr:first-child>td');
+        
+        //화면에 출력
+        for(let i=0; i<tdTags.length; i++){
+            tdTags[i].textContent = lottoArr[i];
+        }
     });
+  
 
 });
 
-
 </script>
 
+
 </body>
+
 
 
 </html>
