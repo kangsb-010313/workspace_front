@@ -5,6 +5,11 @@
 
 
 <title>Insert title here</title>
+<!-- css -->
+<!-- jquery -->
+<script src="../assets/js/jquery-3.7.1.js"></script>
+
+
 </head>
 <body>
 	
@@ -16,6 +21,32 @@
 		<li id="fourth"> 텍스트4 텍스트4 텍스트4 텍스트4 텍스트4 </li>
 		<li id="first"> 텍스트1-1 텍스트1-1 텍스트1-1 텍스트1-1 텍스트1-1 </li>
 	</ul>
+
+<!-- ------------------------------------------------------------------- -->
+<script>
+$(document).ready(function(){
+	console.log('돔트리 완료');
+
+	let seTag = $('#second');
+	console.log(seTag)
+	seTag.css('color', '#f00');
+
+	let thTag = $('#third');
+	console.log(thTag);
+	thTag.css('color', '#00f');
+
+	// let foTag = $('#fourth');
+	// console.log(foTag);
+	// foTag.css('color', '#0f0');
+
+	let fiTag = $('#first'); //맨 위 1개만 적용 --> id는 이름이 겹치게 쓰지말것
+	console.log(fiTag);
+	fiTag.css('color', '#0f0');
+
+
+});
+
+</script>
 
 
 </body>
