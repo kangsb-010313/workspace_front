@@ -48,24 +48,37 @@ document.addEventListener('DOMContentLoaded', function(){
 
 	
 	guestbookForm.addEventListener('submit', function(event){
-		console.log('등록 버튼 클릭');
+		console.log('폼 전송 클릭');
 
-		//패스워드를 입력하지 않았다
+		//이름이 비어있으면
+		let nameTag = document.querySelector('input[name="name"]');
+		let name = nameTag.value.trim();
+
+		if(name == ''){
+
+			window.alert('이름을 확인해주세요');
+			event.preventDefault(); //원래(전송)하던거 멈추기
+
+			return false;
+		}
+		
+		//패스워드가 비어있으면
 		let pwTag = document.querySelector('input[name="pw"]');
-		console.log(pwTag);
+		let pw = pwTag.value.trim();
+		console.log(pw);
 
-		let pw = pwTag.value;
 		if(pw == ''){
-			//전송을 멈춰라
-			event.preventDefault();
-
-			window.alert('비밀번호를 입력하세요');
+			window.alert('비밀번호를 확인해주세요');//전송을 멈춰라
+			event.preventDefault(); //원래(전송)하던거 멈추기
 
 			return false;
 		}
 
+		return true;
 
 	});
+
+
 	
 
 });
