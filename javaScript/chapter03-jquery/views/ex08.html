@@ -2,9 +2,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-
-
 <title>Insert title here</title>
+<!-- css  -->
+<!-- js  -->
+<script src="../assets/js/jquery-3.7.1.js"></script>
 </head>
 
 <body>
@@ -17,6 +18,21 @@
 		<li class="del">삭제할  아이템입니다.</li>
 		<li>다섯 번째 아이템입니다.</li>
 	</ul>
+
+<!-- ------------------------------------------------------------------- -->
+<script>
+$(document).ready(function(){
+	console.log('돔트리 완료');
+
+	let liTags = $('.del');
+	console.log(liTags); //삭제
+	//liTags.remove();
+	liTags.text(''); //글씨를 공백으로 (자리는 유지됨)
+
+});
+
+</script>
+
 
 </body>
 

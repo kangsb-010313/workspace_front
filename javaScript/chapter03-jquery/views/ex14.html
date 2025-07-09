@@ -2,9 +2,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
-
 <title>Insert title here</title>
-
+<!-- css  -->
 	<style>
 		ul {
 			background-color: blue; 
@@ -19,6 +18,8 @@
 		
 	</style>
 
+<!-- js  -->
+<script src="../assets/js/jquery-3.7.1.js"></script>
 
 </head>
 <body>
@@ -33,17 +34,100 @@
 	<button id="btn" type="button">li요소추가</button>
 	<br>
 	<br>
-	<button id="datBtn" type="button">전체데이터수집</button>
+	<button id="btnData" type="button">전체데이터수집</button>
+
+<!-- ------------------------------------------------------------------- -->
+<script>
+$(document).ready(function(){
+
+	console.log('돔트리완료');
 	
+	//li요소추가 버튼을 클릭했을 때
+	$('#btn').on('click', function(){
+		console.log('요소추가버튼클릭');
+
+		let str = '';
+		str += '<li data-bno="5" data-pname="정성찬">다섯번째 아이템입니다.</li>';
+		str += '<li data-bno="6" data-pname="쇼타로">여섯번째 아이템입니다.</li>';
+		str += '<li data-bno="7" data-pname="이소희">일곱번째 아이템입니다.</li>';
+
+		$('ul').append(str);
+	});
+
+	//li태그(요소)를 클릭했을 때
+	/*
+	$('li').on('click', function(){
+		console.log('li버튼클릭');
+
+		let $this = $(this);
+		console.log($this.text());
+		
+
+	});
+	*/
+
+	//ul태그(요소)를 클릭했을 때
+	$('ul').on('click', 'li', function(){
+		console.log('클릭');
+		let $this = $(this);
+		console.log($this.text());
+
+	});
+
+	//btnData 클릭했을 때
+	$('#btnData').on('click', function(){
+		console.log('전체수집버튼클릭');
+
+		//리스트 만들기///////////////////////////////////
+		let personList = [];
+
+		//데이터 수집하기->묶기->리스트추가하기/////////////////
+		let liTags = $('ul>li');
+		/*
+		//js반복문 사용
+		for(let i=0; i<liTags.length; i++){
+
+			let name = $(liTags[i]).data('pname');
+			console.log(name);
+			
+		}
+		*/
+
+		//jquery에 반복문 사용
+		liTags.each(function(index, item){
+			// console.log(index);
+			// console.log(item);
+
+			//item을 사용할 때 
+			/*
+			item은 자바스크립트변수 data()를 가지고 있지 않다 
+			item자바스크립트변수를 jquery용으로 변형시킨다 
+			data()는 jquery용으로 js에는 없는 함수 
+			*/
+			let bno = $(item).data('bno');
+			let pname = $(item).data('pname');
+
+			personVO = {
+				bno: bno,
+				pname: pname
+			};
+
+			personList.push(personVO);
+
+		});
+
+		console.log(personList);
+	});
+
+
+
+});
+
+
+</script>	
 	
 	
 </body>
-
-
-
-
-
-
 
 
 </html>

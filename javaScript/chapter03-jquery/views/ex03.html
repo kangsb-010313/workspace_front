@@ -2,9 +2,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-
-
 <title>Insert title here</title>
+<!-- css -->
+<!-- jquery -->
+<script src="../assets/js/jquery-3.7.1.js"></script>
 </head>
 
 <body>
@@ -17,6 +18,28 @@
 		<li class="blue"> 텍스트 텍스트 텍스트 텍스트 텍스트 </li>
 		<li class="green"> 텍스트 텍스트 텍스트 텍스트 텍스트 </li>
 	</ul>
+
+<!-- ------------------------------------------------------------------- -->
+<script>
+//돔트리가 완료되었을 때
+$(document).ready(function(){
+	console.log('돔트리 완료');
+	
+	let liTags = $('.red');
+	liTags.css('color', '#f00');
+
+	///////////////////////////////////
+	$('.blue').css('color', '#00f');
+	
+	///////////////////////////////////
+	//그룹선택자 (한 번에 바꿀 수 있다)
+	$('.red, .blue').css('color', '#f0f');
+
+});
+
+
+</script>
+
 
 </body>
 

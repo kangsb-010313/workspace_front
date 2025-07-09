@@ -2,17 +2,16 @@
 <html>
 <head>
 <meta charset="UTF-8">
-
-
+<title>Insert title here</title>
+<!-- css  -->
 <style>
 	.red {color: red;}
 	
 	.blue {color: blue;}
 
 </style>
-
-
-<title>Insert title here</title>
+<!-- js  -->
+<script src="../assets/js/jquery-3.7.1.js"></script>
 </head>
 
 <body>
@@ -28,6 +27,46 @@
 	비밀번호2:<input type="password" name="password2" value="1234"><br>
 	<textarea name="content2">산토끼토끼야</textarea>
 	
+
+<!-- ------------------------------------------------------------------- -->
+ <script>
+$(document).ready(function(){
+
+	console.log('돔트리 완료');
+
+	//태그 잡아오기
+	let nameTag = $('input[name="name"]');
+	let pwTag = $('input[name="password"]');
+	let txTag = $('[name="content"]');
+
+	//이름 
+	nameTag.val('쇼타로');
+
+	//패스워드
+	pwTag.val('123');
+
+	//컨텐츠
+	txTag.val('학교종이 땡땡땡');
+
+	///////////////////////////////////
+	//태그 잡아오기
+	let name2Tag = $('input[name="name2"]');
+	let pw2Tag = $('input[name=password2]');
+	let tx2Tag = $('[name="content2"]');
+
+	//이름
+	console.log(name2Tag.val());
+
+	//패스워드
+	console.log(pw2Tag.val());
+
+	//컨텐츠
+	console.log(tx2Tag.val());
+
+
+});
+</script>
+
 </body>
 
 

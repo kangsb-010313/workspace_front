@@ -2,15 +2,55 @@
 <html>
 <head>
 <meta charset="UTF-8">
-
-
 <title>Insert title here</title>
+<!-- css  -->
+<!-- js  -->
+<script src="../assets/js/jquery-3.7.1.js"></script>
 </head>
 <body>
 	<div>
 		<h3 id="display">이름출력영역</h3>
 		<button id="btn" type="button">테스트버튼</button>
 	</div>
+
+<!-- ------------------------------------------------------------------- -->
+ <script>
+$(document).ready(function(){
+
+	console.log('돔트리완료');
+
+	let btnTag = $('#btn');
+
+	btnTag.on('click', function(){
+		console.log('클릭감지');
+
+		let h3Tag = $('#display');
+		console.log(h3Tag);
+
+		//글자변경
+		h3Tag.text('정성찬');
+
+		//색 변경 --> css
+		h3Tag.css('color', '#00f');
+
+
+
+
+
+
+	});
+
+
+
+
+
+});
+
+
+
+ </script>
+
+
 
 </body>
 
